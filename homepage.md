@@ -1,3 +1,4 @@
+### Files Struktur
 Folgende File-Struktur im Homepage Docker-Ordner für Homepage anlegen:
 ```
 ./config/bookmarks.yaml
@@ -6,6 +7,7 @@ Folgende File-Struktur im Homepage Docker-Ordner für Homepage anlegen:
 ./config/settings.yaml
 ./config/widgets.yaml
 ```
+### Settings.yaml
 Im "settings.yaml" legst du die grundsätzliche Strucktur der Seite fest:
 [https://gethomepage.dev/latest/configs/settings](https://gethomepage.dev/latest/configs/settings)
 ```Yaml
@@ -38,7 +40,8 @@ layout:
     columns: 5
     statusStyle: "dot"
 ```
-im docker.yaml kannst du deine Docker API verbinden (dann kannst du states der docker checken) - oder im kubernetes.yaml wenn du kubernetes brauchst
+### docker.yaml
+Im docker.yaml kannst du deine Docker API verbinden (dann kannst du states der docker checken) - oder im kubernetes.yaml wenn du kubernetes brauchst
 ![](https://appflowy.denniscloud.io/api/file_storage/f1683278-ac40-4561-820e-f26e54d4427a/v1/blob/cf324305%2D43b4%2D4a46%2D805f%2Db33f9d35b631/8qen8NUOVehobYQafZ2wJ7kkeaMmgx0RWXslbfykr-o=.png)
 Das checken definierst du nicht hier - kommt dann im services.yaml
 [https://gethomepage.dev/latest/configs/docker/](https://gethomepage.dev/latest/configs/docker/)
@@ -54,6 +57,7 @@ dockertower2:
   socket: /var/run/docker.sock #wenn homepage in einem Docker läuft kannst du den lokal so einbinden
 ```
 
+### services.yaml
 Im services.yaml definierst du die Links und widgets für deine kacheln.
 Alle verfügbarern widgets findest du hier:
 [https://github.com/gethomepage/homepage/tree/main/docs/widgets/services](https://github.com/gethomepage/homepage/tree/main/docs/widgets/services)
@@ -108,6 +112,7 @@ Weitere Icons: [https://pictogrammers.com/library/mdi/](https://pictogrammers.co
             container: gitea #name vom container
 ```
 
+### widgets.yaml
 Um im header gewisse Informationen anzuzgeigen kannst du das widgets.yaml schreiben - vom lokalen docker host wo homepage drauf läuft
 [https://gethomepage.dev/latest/configs/service-widgets](https://gethomepage.dev/latest/configs/service-widgets)
 
